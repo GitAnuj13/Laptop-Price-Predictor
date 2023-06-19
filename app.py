@@ -4,10 +4,8 @@ import numpy as np
 import joblib
 # import the model
 
-data_and_pipeline = joblib.load('data_and_pipeline.joblib')
-
-df = data_and_pipeline['df']
-pipe = data_and_pipeline['pipe']
+pipe = pickle.load(open('pipe.pkl','rb'))
+df = pickle.load(open('df.pkl','rb'))
 
 st.title("Laptop Predictor")
 
